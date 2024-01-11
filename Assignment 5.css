@@ -5,66 +5,15 @@ ul {
   padding: 0;
   font-family: "Segoe UI";
 }
-.tabL {
-  display: none;
-}
-.tabP {
-  display: none;
-}
-.mob {
-  display: none;
-}
-/* Mobile */
-@media (max-width: 600px) {
-  .desk {
-    display: none;
-  }
-  .tabL {
-    display: none;
-  }
-  .tabP {
-    display: none;
-  }
-  .mob {
-    display: block;
-  }
-}
-/* Tablet portrait */
-@media (min-width: 601px) and (max-width: 768px) {
-  .desk {
-    display: none;
-  }
-  .tabL {
-    display: none;
-  }
-  .tabP {
-    display: block;
-  }
-  .mob {
-    display: none;
-  }
-}
-/* Tablet Landscape */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .desk {
-    display: none;
-  }
-  .tabL {
-    display: block;
-  }
-  .tabP {
-    display: none;
-  }
-  .mob {
-    display: none;
-  }
-}
+
+/* Style for image for transition and hover */
 img {
   transition: box-shadow 0.3s ease;
 }
 img:hover {
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7);
 }
+
 /* Navbar styling */
 nav {
   display: flex;
@@ -77,7 +26,6 @@ nav {
 .nav-links {
   display: flex;
   list-style: none;
-  /* margin-left: 70px; */
 }
 
 .nav-links li {
@@ -88,15 +36,15 @@ nav {
 
 /* Adjusting the hover effect */
 .nav-links li:not(:first-child):hover {
-  color: black; /* Change text color to white on hover */
-  background-color: white; /* Change background color on hover */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Adding transition */
+  color: black;
+  background-color: white;
+  transition: color 0.3s ease, background-color 0.3s ease;
   border-radius: 4px;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: inherit; /* Inherit color from parent for anchor elements */
+  color: inherit;
 }
 
 /* Burger menu for mobile */
@@ -115,7 +63,7 @@ nav {
   margin: 4px;
 }
 
-/* Responsive design */
+/* Responsive design for Navbar */
 @media screen and (max-width: 600px) {
   .nav-links {
     display: none;
@@ -140,7 +88,7 @@ nav {
   }
 }
 
-/* Home Section */
+/* Home Section Styling */
 
 .home {
   background-color: #ddf0ff;
@@ -206,21 +154,33 @@ nav {
     transform: translateX(13px);
   }
 }
+
+/* Responsive Design for Home Section */
 @media screen and (max-width: 600px) {
   .home-content {
     flex-direction: column;
   }
-  img {
-    height: auto; /* Allow the height to adjust based on content */
-    max-width: 100%; /* Make the image fill the container width */
+
+  .home-pic {
+    padding: 20px;
+    min-height: auto;
+    height: auto;
+
+    img {
+      width: 100%;
+      max-height: 15rem;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  .home-text {
+    padding: 1rem 0;
+    margin-right: 0;
   }
 }
 
-@media (min-width: 600px) {
-}
-
-/* Pages Section  */
-
+/* Pages Section  Styling */
 .pages {
   background-color: #68edb6;
   min-height: 25rem;
@@ -284,17 +244,27 @@ nav {
     transform: translateX(13px);
   }
 }
-
+/* Responsive Design for Pages Section */
 @media screen and (max-width: 600px) {
   .pages-content {
     flex-direction: column-reverse;
   }
+
+  .pages-pic {
+    padding: 20px;
+    min-height: auto;
+    height: auto;
+
+    img {
+      width: 100%;
+      max-height: 15rem;
+      object-fit: contain;
+      display: block;
+    }
+  }
 }
 
-@media (min-width: 600px) {
-}
-
-/* About Us Section */
+/* About Us Section Styling */
 .container {
   display: flex;
   justify-content: center;
@@ -376,6 +346,16 @@ nav {
   border: 1px solid #515151;
 }
 
+/* Responsive Design for About Us Section */
+@media (max-width: 600px) {
+  .box {
+    border: 1px solid #ddf0ff;
+    height: auto;
+    /* widt h: 500px; */
+    padding: 20px 100px 20px 100px;
+  }
+}
+
 /* Contact Us Section*/
 footer {
   display: flex;
@@ -421,6 +401,7 @@ footer ul li:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Responsive Design for Footer Section */
 @media (max-width: 600px) {
   footer {
     display: flex;
