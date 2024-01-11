@@ -1,0 +1,429 @@
+/* Resetting default margin and padding */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+}
+.tabL {
+  display: none;
+}
+.tabP {
+  display: none;
+}
+.mob {
+  display: none;
+}
+/* Mobile */
+@media (max-width: 600px) {
+  .desk {
+    display: none;
+  }
+  .tabL {
+    display: none;
+  }
+  .tabP {
+    display: none;
+  }
+  .mob {
+    display: block;
+  }
+}
+/* Tablet portrait */
+@media (min-width: 601px) and (max-width: 768px) {
+  .desk {
+    display: none;
+  }
+  .tabL {
+    display: none;
+  }
+  .tabP {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+}
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .desk {
+    display: none;
+  }
+  .tabL {
+    display: block;
+  }
+  .tabP {
+    display: none;
+  }
+  .mob {
+    display: none;
+  }
+}
+img {
+  transition: box-shadow 0.3s ease;
+}
+img:hover {
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7);
+}
+/* Navbar styling */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #333;
+  padding: 0.5rem 5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  /* margin-left: 70px; */
+}
+
+.nav-links li {
+  margin-right: 30px;
+  color: white;
+  padding: 10px;
+}
+
+/* Adjusting the hover effect */
+.nav-links li:not(:first-child):hover {
+  color: black; /* Change text color to white on hover */
+  background-color: white; /* Change background color on hover */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Adding transition */
+  border-radius: 4px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent for anchor elements */
+}
+
+/* Burger menu for mobile */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+  }
+
+  .nav-links.active li {
+    margin: 10px 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+/* Home Section */
+
+.home {
+  background-color: #ddf0ff;
+  min-height: 25rem;
+  height: auto;
+  display: flex;
+}
+
+.home-content {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.home-text {
+  padding: 1rem 0 5rem 0;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  * {
+    margin: 0.5rem 0;
+  }
+}
+
+.home-pic {
+  padding: 20px;
+  min-height: 20rem;
+  height: auto;
+  img {
+    height: 100%;
+    max-width: 15rem;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.btn1 {
+  color: white;
+  border-color: #1095ff;
+  background-color: #1095ff;
+  border-radius: 0.3rem;
+  padding: 8px 10px 8px 8px;
+  a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .fa-angle-double-right {
+    margin-left: -10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+}
+
+.btn1:hover {
+  border-color: #0780e0;
+  background-color: #0780e0;
+  .fa-angle-double-right {
+    opacity: 1;
+    transform: translateX(13px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .home-content {
+    flex-direction: column;
+  }
+  img {
+    height: auto; /* Allow the height to adjust based on content */
+    max-width: 100%; /* Make the image fill the container width */
+  }
+}
+
+@media (min-width: 600px) {
+}
+
+/* Pages Section  */
+
+.pages {
+  background-color: #68edb6;
+  min-height: 25rem;
+  height: auto;
+  display: flex;
+}
+
+.pages-content {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.pages-text {
+  padding: 1rem 0 5rem 0;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  * {
+    margin: 0.5rem 0;
+  }
+}
+
+.pages-pic {
+  padding: 20px;
+  min-height: 20rem;
+  height: auto;
+  img {
+    height: 100%;
+    max-width: 15rem;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.btn2 {
+  color: white;
+  border-color: #00bc6e;
+  background-color: #00bc6e;
+  border-radius: 0.3rem;
+  padding: 8px 10px 8px 8px;
+  a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .fa-angle-double-right {
+    margin-left: -10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+}
+.btn2:hover {
+  border-color: #019558;
+  background-color: #019558;
+  .fa-angle-double-right {
+    opacity: 1;
+    transform: translateX(13px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pages-content {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 600px) {
+}
+
+/* About Us Section */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: 1px solid #ddf0ff;
+  height: auto;
+  width: 160px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .items {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 1s ease-in-out;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  h4 {
+    margin-bottom: -5px;
+  }
+  .items:hover {
+    transform: rotate(360deg);
+  }
+}
+.box:hover {
+  color: white;
+  transform: scale(1.05);
+  .items {
+    transform: rotate(360deg);
+    background-color: white;
+  }
+}
+.music:hover {
+  background-color: #ff4cf5;
+}
+.fa-music {
+  color: #ff4cf5;
+  border: 1px solid #ff4cf5;
+}
+.downloads:hover {
+  background-color: #009f7b;
+}
+.fa-download {
+  color: #009f7b;
+  border: 1px solid #009f7b;
+}
+.pictures:hover {
+  background-color: #ffc31b;
+}
+.fa-camera {
+  color: #ffc31b;
+  border: 1px solid #ffc31b;
+}
+.connect:hover {
+  background-color: #4c8aff;
+}
+.fa-wifi {
+  color: #4c8aff;
+  border: 1px solid #4c8aff;
+}
+.location:hover {
+  background-color: #515151;
+}
+.fa-location-dot {
+  color: #515151;
+  border: 1px solid #515151;
+}
+
+/* Contact Us Section*/
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #515151;
+  padding: 50px;
+}
+footer {
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  background-color: #515151;
+  align-items: flex-start;
+}
+
+footer div {
+  flex: 1;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+footer div:last-child {
+  margin-right: 0;
+}
+
+footer h4 {
+  margin-top: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+footer ul li:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
